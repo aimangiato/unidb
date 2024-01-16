@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>163083880</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd ;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1
+id="piattaforma-per-la-gestione-dei-servizi-universitari">Piattaforma
+per la gestione dei servizi universitari</h1>
+<p>Relazione del progetto “Piattaforma per la gestione degli esami
+universitari” (UniDB) per il corso di Basi Di dati, appello del
+18/01/2024.</p>
+<p>Realizzato da Aiman Qaouji, 982535</p>
+<p>Per accedere a qualsiasi account di UniDB, la password è 12345. Le email sono tutte visibili dall'account della segreteria (segre.teria@segreteria.uni). </p>
+<ul>
+<li><a
+href="#piattaforma-per-la-gestione-dei-servizi-universitari">Piattaforma
+per la gestione dei servizi universitari</a>
+<ul>
+<li><a href="#installazione-delle-componenti">Installazione delle
+componenti</a></li>
+<li><a href="#struttura">Struttura</a></li>
+<li><a href="#database-struttura-e-funzionalità">Database: Struttura e
+funzionalità</a>
+<ul>
+<li><a href="#generalizzazione-users">Generalizzazione users</a></li>
+<li><a href="#storici-carriera-e-storici-studente">Storici carriera e
+storici studente</a></li>
+<li><a href="#appelli-e-verbalizzazione">Appelli e
+verbalizzazione</a></li>
+<li><a href="#appelli-desame-programmazione-e-cancellazione">Appelli
+d’esame: Programmazione e cancellazione</a></li>
+<li><a href="#insegnamenti">Insegnamenti</a></li>
+<li><a href="#iscrizione-a-unesame">Iscrizione a un’esame</a></li>
+</ul></li>
+<li><a href="#applicazione-web">Applicazione Web</a>
+<ul>
+<li><a href="#strumenti-supplementari">Strumenti supplementari</a></li>
+<li><a href="#accesso-log-in">Accesso (log-in)</a></li>
+<li><a href="#homepage">Homepage</a></li>
+<li><a href="#pagina-di-gestione">Pagina di Gestione</a></li>
+<li><a href="#pagina-di-form">Pagina di form</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="installazione-delle-componenti">Installazione delle
+componenti</h2>
+<p>Per l’installazione delle componenti si faccia riferimento al <a
+href="manuale_utente.html">manuale utente</a>. ## Struttura *
+<strong>database:</strong> Il dump del database è contenuto nella
+cartella <strong>progetto/database</strong>, contenente: due script sql
+(uno per la creazione e l’altro per la popolazione del database), e due
+immagini riportanti gli schemi ER e logico. * <strong>WebApp:</strong>
+Tutti i file PHP e CSS sono contenuti nella cartella
+<strong>progetto/webapp</strong>. * <strong>docs:</strong>
+Documentazione è interamente contenuta nella cartella corrente.</p>
+<h2 id="database-struttura-e-funzionalità">Database: Struttura e
+funzionalità</h2>
+<h3 id="generalizzazione-users">Generalizzazione users</h3>
+<p>Lo schema ER presenta una gerarchia tra l’entità padre users e le
+entità figlie segreteria, docente e studente. Ho implementato questa
+gerarchia in quanto vi è un attributo comune a tutti
+(<strong>email</strong>) e per distinguere concettualmente
+l’<strong>utente</strong> (entità generalizzata che accede
+all’applicazione con email e password) dal <strong>tipo di
+utente</strong> (entità che in base alla sua natura può accedere a
+determinati servizi/funzionalità/tabelle).</p>
+<h3 id="storici-carriera-e-storici-studente">Storici carriera e storici
+studente</h3>
+<p>Quando uno studente consegue la Laurea (ovvero supera tutti gli esami
+previsti nel suo corso di laurea) oppure rinuncia agli studi, le sue
+informazioni vengono archiviate automaticamente: I dati delle tabelle
+<strong>unidb.studente</strong> e <strong>unidb.carriera_esame</strong>
+vengono caricati, rispettivamente, nelle tabelle speculari
+<strong>unidb.storico_studente</strong> e
+<strong>unidb.storico_carriera</strong>. Tutto ciò grazie
+all’implementazione del trigger <strong>storico_trigger</strong> che fa
+uso del meotodo <strong>studente_carriera_storico</strong>:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TRIGGER</span> storico_trigger</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">BEFORE</span> <span class="kw">DELETE</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> unidb.studente</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">EXECUTE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.studente_carriera_storico();</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.studente_carriera_storico()</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    RETURNS <span class="kw">trigger</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    LANGUAGE <span class="st">&#39;plpgsql&#39;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">COST</span> <span class="dv">100</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    VOLATILE <span class="kw">NOT</span> LEAKPROOF</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">AS</span> $BODY$</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">begin</span> </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">insert</span> <span class="kw">into</span> unidb.storico_studente <span class="kw">values</span>(<span class="kw">old</span>.matricola, <span class="kw">old</span>.nome, <span class="kw">old</span>.cognome, <span class="kw">old</span>.anno, <span class="kw">old</span>.email, <span class="kw">old</span>.codice_cdl);</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">insert</span> <span class="kw">into</span> unidb.storico_carriera</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">select</span> <span class="op">*</span> <span class="kw">from</span> unidb.carriera_esame <span class="kw">where</span> matricola <span class="op">=</span> <span class="kw">old</span>.matricola;</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">return</span> <span class="kw">old</span>;</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span>;</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>$BODY$;</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.studente_carriera_storico()</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    OWNER <span class="kw">TO</span> postgres;</span></code></pre></div>
+<h3 id="appelli-e-verbalizzazione">Appelli e verbalizzazione</h3>
+<p>Quando a uno studente viene verbalizzato il voto di un determinato
+esame, questo voto viene registrato nella tabella
+<strong>unidb.carriera_esame</strong>. Sarebbe ragionevole che questo
+studente venga anche disiscritto dall’appello in cui ha sostenuto
+quell’esame una volta verbalizzato, per evitare informazioni ridondanti
+nella pagina di gestione degli studenti iscritti del docente. ragion per
+cui ho implementato il seguente trigger
+<strong>after_insert_carriera_esame</strong>:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TRIGGER</span> after_insert_carriera_esame</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">AFTER</span> <span class="kw">INSERT</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> unidb.carriera_esame</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">EXECUTE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.disiscrivi_dopo_verbalizzazione();</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.disiscrivi_dopo_verbalizzazione()</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    RETURNS <span class="kw">trigger</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    LANGUAGE <span class="st">&#39;plpgsql&#39;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">COST</span> <span class="dv">100</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    VOLATILE <span class="kw">NOT</span> LEAKPROOF</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="kw">AS</span> $BODY$</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- Cancella l&#39;iscrizione dello studente all&#39;esame dopo la verbalizzazione</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">DELETE</span> <span class="kw">FROM</span> unidb.iscrizione_esame</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">WHERE</span> matricola <span class="op">=</span> <span class="kw">NEW</span>.matricola</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">AND</span> codice_esame <span class="op">=</span> <span class="kw">NEW</span>.codice_esame;</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">RETURN</span> <span class="kw">NEW</span>;</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>;</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>$BODY$;</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.disiscrivi_dopo_verbalizzazione()</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    OWNER <span class="kw">TO</span> postgres;</span></code></pre></div>
+<h3 id="appelli-desame-programmazione-e-cancellazione">Appelli d’esame:
+Programmazione e cancellazione</h3>
+<p>La creazione o la cancellazione di un appello presentano due
+criticità: * Un docente non dovrebbe poter eliminare un appello se ci
+sono studenti iscritti; * Un docente non dovrebbe poter creare un
+appello se in quel giorno è previsto già un altro appello dello stesso
+CDL e anno accademico</p>
+<p>Anche questi due problemi vengono ovviati, rispettivamente, con i
+trigger <strong>before_delete_esame</strong>:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TRIGGER</span> before_delete_esame</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">BEFORE</span> <span class="kw">DELETE</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> unidb.esame</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">EXECUTE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.check_iscrizioni_before_delete();</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.check_iscrizioni_before_delete()</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    RETURNS <span class="kw">trigger</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    LANGUAGE <span class="st">&#39;plpgsql&#39;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">COST</span> <span class="dv">100</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    VOLATILE <span class="kw">NOT</span> LEAKPROOF</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">AS</span> $BODY$</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">DECLARE</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  esame_count <span class="dt">INTEGER</span>;</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- Controlla se ci sono iscrizioni per l&#39;esame</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">SELECT</span> <span class="fu">COUNT</span>(<span class="op">*</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">INTO</span> esame_count</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> unidb.iscrizione_esame</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">WHERE</span> codice_esame <span class="op">=</span> <span class="kw">OLD</span>.codice_esame;</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- Se ci sono iscrizioni, annulla la cancellazione</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">IF</span> esame_count <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">THEN</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    RAISE <span class="kw">EXCEPTION</span> <span class="st">&#39;Impossibile cancellare l</span><span class="ch">&#39;&#39;</span><span class="st">esame, ci sono studenti iscritti.&#39;</span>;</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">END</span> <span class="cf">IF</span>;</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="co">-- Se non ci sono iscrizioni, permetti la cancellazione</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">RETURN</span> <span class="kw">OLD</span>;</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>;</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>$BODY$;</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.check_iscrizioni_before_delete()</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    OWNER <span class="kw">TO</span> postgres;</span></code></pre></div>
+<p>e <strong>programmazione_esame_trigger</strong>:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TRIGGER</span> programmazione_esame_trigger</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">BEFORE</span> <span class="kw">INSERT</span> <span class="kw">OR</span> <span class="kw">UPDATE</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> unidb.esame</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">EXECUTE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.check_inserimento_esame();</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.check_inserimento_esame()</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    RETURNS <span class="kw">trigger</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    LANGUAGE <span class="st">&#39;plpgsql&#39;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">COST</span> <span class="dv">100</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    VOLATILE <span class="kw">NOT</span> LEAKPROOF</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">AS</span> $BODY$</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="cf">begin</span> </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>perform <span class="op">*</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> unidb.insegnamento i <span class="kw">INNER</span> <span class="kw">JOIN</span> unidb.esame e <span class="kw">ON</span> i.codice_i <span class="op">=</span> e.codice_i</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> e.data_esame <span class="op">=</span> <span class="kw">new</span>.data_esame <span class="kw">AND</span> e.codice_cdl <span class="op">=</span> <span class="kw">new</span>.codice_cdl <span class="kw">AND</span> i.anno_erogazione <span class="op">=</span> (</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">select</span> anno_erogazione</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="kw">from</span> unidb.insegnamento</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">where</span> insegnamento.codice_i <span class="op">=</span> <span class="kw">new</span>.codice_i <span class="kw">AND</span> insegnamento.codice_cdl <span class="op">=</span> <span class="kw">new</span>.codice_cdl</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="cf">IF</span> FOUND <span class="cf">THEN</span> RAISE <span class="st">&#39;Errore: in questa data è già previsto un esame dello stesso CDL e anno di erogazione&#39;</span>; <span class="kw">RETURN</span> <span class="kw">NULL</span>;</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="cf">ELSE</span> <span class="kw">RETURN</span> <span class="kw">NEW</span>;</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span> <span class="cf">IF</span>;</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>;</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>$BODY$;</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.check_inserimento_esame()</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    OWNER <span class="kw">TO</span> postgres;</span></code></pre></div>
+<h3 id="insegnamenti">Insegnamenti</h3>
+<p>Come richiesto, nelle specifiche è presente un controllo di
+Insegnamenti massimi che un docente può sostenere (3), grazie al trigger
+<strong>max_insegnamenti_trigger</strong>:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TRIGGER</span> max_insegnamenti_trigger</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">BEFORE</span> <span class="kw">INSERT</span> <span class="kw">OR</span> <span class="kw">UPDATE</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> unidb.insegnamento</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">EXECUTE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.maxcheck_insegnamenti_docente();</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.maxcheck_insegnamenti_docente()</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    RETURNS <span class="kw">trigger</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    LANGUAGE <span class="st">&#39;plpgsql&#39;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">COST</span> <span class="dv">100</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    VOLATILE <span class="kw">NOT</span> LEAKPROOF</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">AS</span> $BODY$</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="kw">DECLARE</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>numero_insegnamenti <span class="dt">INT</span>;</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(codice_i) <span class="kw">INTO</span> numero_insegnamenti</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> unidb.insegnamento i <span class="kw">INNER</span> <span class="kw">JOIN</span> unidb.docente d <span class="kw">on</span> i.docente <span class="op">=</span> d.codice_docente</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="kw">new</span>.docente <span class="op">=</span> d.codice_docente;</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="cf">IF</span> numero_insegnamenti <span class="op">&gt;=</span> <span class="dv">3</span> <span class="cf">THEN</span> RAISE <span class="st">&#39;Ogni docente può avere al massimo 3 insegnamenti di cui è responsabile.&#39;</span>;</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="kw">RETURN</span> <span class="kw">NULL</span>;</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="cf">ELSE</span> <span class="kw">RETURN</span> <span class="kw">new</span>;</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span> <span class="cf">IF</span>;</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>;</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>$BODY$;</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.maxcheck_insegnamenti_docente()</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    OWNER <span class="kw">TO</span> postgres;</span></code></pre></div>
+<h3 id="iscrizione-a-unesame">Iscrizione a un’esame</h3>
+<p>Uno studente, per iscriversi ad un esame, ha come vincoli quello di
+iscriversi ad un esame facente parte del suo piano di studi, e quello di
+aver soddisfatto tutte le propedeuticità richieste da quell’esame.
+Questo controllo è effettuato dal trigger
+<strong>iscrizione_trigger</strong>:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TRIGGER</span> iscrizione_trigger</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">BEFORE</span> <span class="kw">INSERT</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> unidb.iscrizione_esame</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">EXECUTE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.check_iscrizione_esame();</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.check_iscrizione_esame()</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    RETURNS <span class="kw">trigger</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    LANGUAGE <span class="st">&#39;plpgsql&#39;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">COST</span> <span class="dv">100</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    VOLATILE <span class="kw">NOT</span> LEAKPROOF</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="kw">AS</span> $BODY$</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="kw">DECLARE</span> </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>propedeuticita_richieste <span class="dt">INT</span>;</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>propedeuticita_passate <span class="dt">INT</span>;</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(propedeuticita) <span class="kw">INTO</span> propedeuticita_richieste</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> unidb.propedeuticita</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> codice_i <span class="op">=</span> (</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">select</span> e.codice_i</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">from</span> unidb.insegnamento i <span class="kw">inner</span> <span class="kw">join</span> unidb.esame e <span class="kw">on</span> i.codice_i <span class="op">=</span> e.codice_i</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">where</span> <span class="kw">new</span>.codice_esame <span class="op">=</span> e.codice_esame</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(<span class="kw">distinct</span> i.codice_i) <span class="kw">INTO</span> propedeuticita_passate</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> unidb.carriera_esame c <span class="kw">inner</span> <span class="kw">join</span> unidb.esame e <span class="kw">on</span> c.codice_esame <span class="op">=</span> e.codice_esame </span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="kw">INNER</span> <span class="kw">JOIN</span> unidb.insegnamento i <span class="kw">ON</span> e.codice_i <span class="op">=</span> i.codice_i</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> c.matricola <span class="op">=</span> <span class="kw">new</span>.matricola <span class="kw">AND</span> c.codice_i <span class="kw">in</span> (</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">select</span> propedeuticita</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">from</span> unidb.propedeuticita</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    <span class="kw">where</span> codice_i <span class="op">=</span> (</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>        <span class="kw">select</span> e1.codice_i</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>        <span class="kw">from</span> unidb.insegnamento i1 <span class="kw">inner</span> <span class="kw">join</span> unidb.esame e1 <span class="kw">on</span> i1.codice_i <span class="op">=</span> e1.codice_i</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>        <span class="kw">where</span> <span class="kw">new</span>.codice_esame <span class="op">=</span> e1.codice_esame</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>)<span class="kw">AND</span> c.voto <span class="op">&gt;=</span> <span class="dv">18</span>;</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="cf">IF</span> propedeuticita_richieste <span class="op">=</span> propedeuticita_passate <span class="cf">THEN</span> <span class="kw">RETURN</span> <span class="kw">NEW</span>;</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="cf">ELSE</span> RAISE <span class="st">&#39;Non puoi iscriverti a questo esame in quanto non fa parte del tuo piano di studi o non hai le propedeuticita richieste.&#39;</span>;</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="kw">RETURN</span> <span class="kw">NULL</span>;</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span> <span class="cf">IF</span>;</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>;</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>$BODY$;</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">FUNCTION</span> <span class="kw">public</span>.check_iscrizione_esame()</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>    OWNER <span class="kw">TO</span> postgres;</span></code></pre></div>
+<h2 id="applicazione-web">Applicazione Web</h2>
+<p>Per la maggior parte del sito web le pagine possono essere di due
+“categorie”: <strong>pagine contenenti una lista di informazioni e dati
+(racchiusi da una tabella)</strong>, oppure <strong>pagine di accesso,
+creazione o modifica dati (in cui viene utilizzato un form)</strong>. Le
+pagine infatti sono “standardizzate” e seguono un pattern pressochè
+uguale a quelle della stessa “categoria” e per questo motivo spesso i
+codici delle diverse pagine differiscono di poco.</p>
+<h3 id="strumenti-supplementari">Strumenti supplementari</h3>
+<ul>
+<li><strong>header.php</strong>: File in cui sono contenuti i
+riferimenti ai fogli di stile e ai pacchetti css utilizzati su tutto il
+sito web</li>
+<li><strong>navbar.php</strong>: Barra di navigazione presente su ogni
+pagina dopo l’accesso in cui sono presenti tasto home e logout, e
+riferimento all’utente loggato in quel momento</li>
+<li><strong>funzioni.php</strong>: File in cui sono presenti funzioni
+utilizzate spesso per ridurre il codice ripetuto.</li>
+</ul>
+<h3 id="accesso-log-in">Accesso (log-in)</h3>
+<p>Una volta inserite le credenziali nella pagina di login, il codice
+“redirige” alla pagina <strong>login.php</strong> che, per controllarne
+la validità, a sua volta fa uso della funzione
+<strong>controlla_login</strong>:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> controlla_login(<span class="va">$email</span><span class="ot">,</span> <span class="va">$password</span><span class="ot">,</span> <span class="va">$utente</span>) {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">$logged</span> <span class="op">=</span> <span class="kw">null</span><span class="ot">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="va">$db</span> <span class="op">=</span> open_pg_connection()<span class="ot">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="va">$sql</span> <span class="op">=</span> <span class="st">&quot;SELECT email FROM unidb.users WHERE email = $1 AND password = md5($2) AND utente = $3&quot;</span><span class="ot">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="va">$params</span> <span class="op">=</span> <span class="dt">array</span>(</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="va">$email</span><span class="ot">,</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="va">$password</span><span class="ot">,</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        <span class="va">$utente</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    )<span class="ot">;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="va">$result</span> <span class="op">=</span> <span class="fu">pg_prepare</span>(<span class="va">$db</span><span class="ot">,</span> <span class="st">&quot;check_user&quot;</span><span class="ot">,</span> <span class="va">$sql</span>)<span class="ot">;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="va">$result</span> <span class="op">=</span> <span class="fu">pg_execute</span>(<span class="va">$db</span><span class="ot">,</span> <span class="st">&quot;check_user&quot;</span><span class="ot">,</span> <span class="va">$params</span>)<span class="ot">;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="va">$row</span> <span class="op">=</span> <span class="fu">pg_fetch_assoc</span>(<span class="va">$result</span>)){</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="va">$logged</span> <span class="op">=</span> <span class="va">$row</span>[<span class="st">&#39;email&#39;</span>]<span class="ot">;</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    close_pg_connection(<span class="va">$db</span>)<span class="ot">;</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">$logged</span><span class="ot">;</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><em>Nota bene: per garantire riservatezza, le password sono hashate
+grazie alla funzione md5 di php, che viene applicata sia all’inserimento
+di un nuovo utente da parte della segreteria, sia alla effettiva
+verifica delle credenziali.</em></p>
+<h3 id="homepage">Homepage</h3>
+<p>La homepage è costituita in alto dalla navbar importata con require,
+e più in basso dal menù personalizzato in base al tipo di utente che
+accede:</p>
+<p><a>Esempio di Homepage:</a></p>
+<img src="screen_homepage.png">
+<h3 id="pagina-di-gestione">Pagina di Gestione</h3>
+<p>Una pagina di gestione è costituita da navbar, una tabella riportante
+tutti i dati e tasti di controllo e, se necessario, un link che riporta
+a un form.</p>
+<p><a>Esempio pagina di Gestione:</a></p>
+<img src="screen_gestione.png">
+<h3 id="pagina-di-form">Pagina di form</h3>
+<p>Il form è utilizzato per creare una nuova istanza (studente, docente,
+CDL …) o per modificarla.</p>
+<p><a>Esempio pagina di Form:</a></p>
+<img src="screen_form.png">
+</body>
+</html>
